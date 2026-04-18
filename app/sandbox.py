@@ -1,6 +1,6 @@
-import services
+# import app.services
 import psycopg2
-services._add_tables()
+# app.services._add_tables()
 
 # import psycopg2
 # conn = psycopg2.connect(
@@ -82,3 +82,17 @@ def grant_all_privileges(dbname, user_to_grant):
 
 
 # grant_all_privileges("fastapi_database", "myuser")
+
+
+# import os
+# from dotenv import load_dotenv
+#
+# load_dotenv()
+# POSTGRES_DB_USER = os.getenv("POSTGRES_DB_USER")
+# POSTGRES_DB_PASSWORD = os.getenv("POSTGRES_DB_PASSWORD")
+# POSTGRES_DB_HOST_PORT = os.getenv("POSTGRES_DB_HOST_PORT")
+# POSTGRES_DB_NAME = os.getenv("POSTGRES_DB_NAME")
+#
+# DATABASE_URL = f"postgresql://{POSTGRES_DB_USER}:{POSTGRES_DB_PASSWORD}@localhost:{POSTGRES_DB_HOST_PORT}/{POSTGRES_DB_NAME}"
+#
+# print(DATABASE_URL)

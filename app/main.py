@@ -2,8 +2,8 @@ from typing import List, TYPE_CHECKING
 import fastapi as _fastapi
 import sqlalchemy.orm as _orm
 
-import schemas as _schemas
-import services as _services
+import app.schemas as _schemas
+import app.services as _services
 
 if TYPE_CHECKING:
     from sqlalchemy.orm import Session
@@ -12,6 +12,7 @@ app = _fastapi.FastAPI()
 
 @app.get("/")
 def home_page():
+    _services.add_tables()
     return {"Message": "Hello, Andy!"}
 
 @app.post("/api/contacts/", response_model=_schemas.Contact)
