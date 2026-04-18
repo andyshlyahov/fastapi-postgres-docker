@@ -10,6 +10,10 @@ if TYPE_CHECKING:
 
 app = _fastapi.FastAPI()
 
+@app.get("/")
+def home_page():
+    return {"Message": "Hello, Andy!"}
+
 @app.post("/api/contacts/", response_model=_schemas.Contact)
 async def create_contact(
         contact: _schemas.CreateContact,
