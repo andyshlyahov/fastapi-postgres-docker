@@ -2,3 +2,5 @@ fastapi[all]
 requests
 uvicorn
 gunicorn
+sqlalchemy
+pydantic
