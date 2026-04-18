@@ -4,3 +4,4 @@ uvicorn
 gunicorn
 sqlalchemy
 pydantic
+psycopg2
